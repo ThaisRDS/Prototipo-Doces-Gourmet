@@ -1,0 +1,477 @@
+/* --------------- GERAL --------------- */
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-weight: normal;
+    font-family: sans-serif;
+    user-select: none;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+img {
+    border: 0;
+}
+
+a {
+    background-color: transparent;
+    text-decoration: none;
+}
+
+p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+}
+
+/* --------------- GRID --------------- */
+
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    -moz-boz-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    position: relative;
+}
+
+.container::after, .container::before {
+    content: "";
+    display: table;
+}
+
+.container::after {
+    clear: both;
+}
+
+/* --------------- TITULO --------------- */
+
+.titulo {
+    justify-content: center;
+    padding-top: 76px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.titulo::after {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 2px;
+    background: #351500;
+    margin: 10px auto;
+}
+
+/* --------------- SUBTITULO --------------- */
+
+.subtitulo-p, .subtitulo-q {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: #351500;
+    margin: 57px 0 45px 0;
+}
+
+.subtitulo-p::after, .subtitulo-q::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: #351500;
+    margin: 8px auto;
+}
+
+/* --------------- BOTÃO --------------- */
+
+.btn {
+    padding: 5px 30px;
+    color: #fff;
+    background-color: #351500;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: all .5s ease;
+}
+
+/* --------------- CALL --------------- */
+
+.call-p {
+    text-align: center;
+    padding: 51px 0 0 0 ;
+    clear: both;
+}
+
+.call-q {
+    text-align: center;
+    padding: 29px 0 65px 0;
+}
+
+.call-p p, .call-q p {
+    margin-bottom: 10px;
+}
+
+/* --------------- HEADER --------------- */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    top: 0;
+    padding: 5px 20px 0 20px;
+    background: #fff;
+    border-top: solid 1px #351500;
+    box-shadow: 0 5px 10px #351500;
+}
+
+#header {
+    box-sizing: border-box;
+}
+
+#menu {
+    display: flex;
+    gap: .5rem;
+}
+
+#menu a {
+    display: block;
+    padding: 5px 30px;
+    margin: 5px 0;
+    color: #351500;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: all .5s ease;
+}
+
+#menu a:hover {
+    color: #fff;
+    background: #351500;
+}
+
+#menu a.menu-select {
+    color: #fff;
+    background: #351500;
+}
+
+#btn-mobile {
+    display: none;
+}
+
+/* --------------- INTRO --------------- */
+
+.intro {
+    padding: 10px 0 35px 0;
+    box-shadow: 0 5px 20px #351500;
+}
+
+.intro p {
+    text-align: center;
+    color: #351500;
+}
+
+/* --------------- PRODUTOS --------------- */
+
+.produtos {
+    display: flex;
+    text-align: center;
+}
+
+.lista-prod {
+    box-shadow: 0 5px 20px #351500;
+    margin: 0 30px;
+    padding: 10px;
+}
+
+.lista-prod h3 {
+    margin: 10px 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.lista-prod img {
+    width: 40%;
+}
+
+.lista-prod p {
+    margin: 10px 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+}
+
+/* --------------- QUALIDADE --------------- */
+
+.qualidade {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.qualidade:after {
+    content: "";
+    width: 640px;
+    height: 91px;
+    display: block;
+    background: url("../img/Sobre/linhas.png") no-repeat center;
+    position: absolute;
+    top: 230px;
+    right: 354px;
+}
+
+.qualidade_ {
+    text-align: center;
+    padding-bottom: -40px;
+}
+
+.qualidade_listas {
+    display: flex;
+    justify-content: center;
+    overflow: auto; /* Clear-fix */
+}
+
+.qualidade_listas li {
+    text-align: center;
+    padding: 0 40px;
+}
+
+.qualidade_listas li h3 {
+    font-weight: bold;
+    font-size: 1.2rem;
+    line-height: 25px;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    margin-top: 20px;
+}
+
+.qualidade_listas li h3::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #000;
+    margin: 6px auto;
+}
+
+.list {
+    justify-content: space-between;
+    width: 300px;
+}
+
+.list h3 {
+    padding-top: 30px;
+}
+
+.qualidade img {
+    width: 10%;
+}
+
+/* --------------- FOOTER --------------- */
+
+.footer {
+    height: 100px;
+    background-color: #351500;
+}
+
+.footer p {
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff;
+    text-align: center;
+    padding-top: 42px;
+}
+
+/* --------------- RESPONSIVO --------------- */
+
+/* TABLETS --------------- */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+/* QUALIDADE */
+
+    .qualidade:after {
+        content: "";
+        width: 640px;
+        height: 91px;
+        display: block;
+        background: url("../img/Sobre/linhas.png") no-repeat center;
+        position: absolute;
+        top: 200px;
+        left: 77px;
+    }
+
+    .list h3 {
+        padding-top: 50px;
+        padding-left: 13px;
+    }
+
+}
+    
+/* MOBILE --------------- */
+
+@media (max-width: 768px) {
+
+/* SUBTITULO */
+
+    .subtitulo-q {
+        margin: -8px 0 30px 0;
+    }
+    
+    .subtitulo-q::after, .subtitulo-p::after {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 2px;
+        background: #351500;
+        margin: 8px auto;
+    }
+
+/* CALL */
+
+    .call-p {
+        text-align: center;
+        padding: 11px 0 65px 0 ;
+        clear: both;
+    }
+
+    .call-q {
+        text-align: center;
+        padding: 29px 0 65px 0;
+    }
+
+    .call-p p, .call-q p {
+        margin-bottom: 10px;
+    }
+
+/* MENU */
+
+    #menu {
+        text-align: center;
+        display: block ;
+        position: absolute;
+        width: 100%;
+        top: 50px;
+        right: 0px;
+        background: #fff;
+        z-index: 1000;
+        height: 0px;
+        transition: all .5s ease;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    #nav.active #menu {
+        height: calc(100vh - 70px);
+        visibility: visible;
+        overflow-y: hidden;
+    }
+
+    #menu a {
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 2px solid rgba(35, 15, 00, 0.05);
+        text-transform: uppercase;
+    }
+
+    #btn-mobile {
+        display: flex;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        gap: .5rem;
+        color: #351500;
+        transition: all .5s ease;
+    }
+
+    #burger {
+        border-top: 2px solid;
+        width: 20px;
+    }
+
+    #burger::after, #burger::before {
+        content: " ";
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: all .5s ease;
+        position: relative;
+    }
+
+    #nav.active #burger {
+        border-top-color: transparent;
+    }
+
+    #nav.active #burger::before {
+        transform: rotate(135deg);
+    }
+
+    #nav.active #burger::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+
+/* INTRO */
+
+.intro p {
+    font-size: 0.8rem;
+
+}
+
+/* PRODUTOS */
+
+    .produtos {
+        display: grid;
+    }
+
+    .lista-prod {
+        margin-bottom: 40px;
+    }
+
+/* QUALIDADE */
+
+    .qualidade:after {
+        display: none;
+    }
+
+    .qualidade_listas {
+        display: grid;
+    }
+
+    .qualidade img {
+        width: 20%;
+    }
+
+    .qualidade_listas li h3 {
+        margin-top: -6px;
+    }
+
+    .qualidade_listas li h3::after {
+        margin: 5px auto;
+    }
+
+    .qualidade img {
+        width: 30%;
+    }
+
+/* FOOTER */
+
+    .footer p {
+        font-size: 0.7rem;
+        padding-top: 40px;
+    }
+}
+
+/* --------------- ----- --------------- */
